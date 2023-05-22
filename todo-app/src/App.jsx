@@ -2,15 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'  
 import './App.css'
 
-const Task = ({ children, onDelete }) => {
-  return (
-    <li className="task">
-      <span>{children}</span>
-      // Домашнее задание: реализовать удаление задачи из списка
-      <button type='button' onClick={onDelete}>X</button>
-    </li>
-  )
-}
+
 
 //asd
 
@@ -60,14 +52,6 @@ const TodoList = () => {
           placeholder='Add a new task'
         />
 
-        <ul>
-          {tasks.map((task, idx) => (
-            <Task 
-              key={task + idx}
-              onDelete={() => handleDelete(idx)} 
-            />  
-          ))}
-        </ul>
       </form>
     </>
   )
